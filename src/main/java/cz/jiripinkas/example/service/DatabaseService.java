@@ -11,7 +11,7 @@ public class DatabaseService {
 
 	private static EntityManager entityManager;
 
-	static {
+	public static void init() {
 		System.out.println("*** start create test database ***");
 		entityManager = Persistence.createEntityManagerFactory("example-contact-form").createEntityManager();
 		{

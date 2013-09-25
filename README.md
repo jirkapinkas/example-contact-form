@@ -23,6 +23,10 @@
 	preview = false (also in email.properties).
 </p>
 
+<p>If set preview = true in email.properties, preview database with
+	test data will be created upon application deployment. Preview database
+	will be re-initialized once per day.</p>
+
 <p>
 	How to run:
 	<code>mvn jetty:run</code>
@@ -33,7 +37,9 @@
 	<code>mvn package</code>
 </p>
 
-<p>You can deploy this web application to <a href="http://www.heroku.com">Heroku</a>.</p>
+<p>
+	You can deploy this web application to <a href="http://www.heroku.com">Heroku</a>.
+</p>
 
 <h2>My other projects:</h2>
 
