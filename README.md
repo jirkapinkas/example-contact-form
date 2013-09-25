@@ -38,7 +38,9 @@
 </p>
 
 <p>
-	You can deploy this web application to <a href="http://www.heroku.com">Heroku</a>.
+	You can deploy this web application to <a href="http://www.heroku.com"
+		target="_blank">Heroku</a>. Live preview is here: <a
+		href="http://example-contact-form.jiripinkas.cz" target="_blank">http://example-contact-form.jiripinkas.cz</a>
 </p>
 
 <h2>My other projects:</h2>

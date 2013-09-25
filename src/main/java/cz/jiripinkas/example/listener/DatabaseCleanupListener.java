@@ -8,9 +8,11 @@ import java.util.TimerTask;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
+import javax.servlet.annotation.WebListener;
 
 import cz.jiripinkas.example.service.DatabaseService;
 
+@WebListener
 public class DatabaseCleanupListener implements ServletContextListener {
 
 	@Override
