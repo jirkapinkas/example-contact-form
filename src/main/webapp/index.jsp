@@ -9,6 +9,8 @@
 <h1>Just a simple mailer</h1>
 
 <form action="send-email.html" class="form-signin" method="post">
+	<div class="alert alert-info">By default this application runs in preview mode, 
+	which means that it won't send any actual emails and database will be each hour re-initialized.</div>
 	<div class="errorMessage alert alert-danger" style="display: none"></div>
 	<c:if test="${param.sent eq true}">
 		<div class="alert alert-success">Success! Email sent.</div>
