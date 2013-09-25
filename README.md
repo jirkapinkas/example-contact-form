@@ -1,6 +1,6 @@
 <h1>Just a simple email sender</h1>
 
-<p>This project is to showcase Servlets JSPs and JSTL. Based on
+<p>This project is to showcase Servlets, JSPs and JSTL. Based on
 	Maven, Hibernate, HSQLDB, JavaMail, Twitter Bootstrap and JQuery</p>
 
 <p>

@@ -36,13 +36,15 @@ $(document).ready(function() {
 		var err = $(".errorMessage");
 		if(!isValidEmailAddress(from)) {
 			err.show();
-			err.text("Could not send email, check From field");
+			err.text("Could not send email, inside From field must be valid email!");
+			$(".from").focus();
 			return false;
 		}
 		var to = $(".to").val();
 		if(!isValidEmailAddress(to)) {
 			err.show();
-			err.text("Could not send email, check To field");
+			err.text("Could not send email, inside To field must be valid email!");
+			$(".to").focus();
 			return false;
 		}
 		return true;
