@@ -6,7 +6,9 @@
 <p>
 	<strong>Important notice!</strong> This project is without Spring,
 	which would make configuration and service layer much more easier, but
-	it would also increase basic knowledge at my trainings.
+	it would also increase basic knowledge at my trainings. This example is
+	an entry-level example, so don't expect perfect Java EE architecture
+	(it isn't) :-)
 </p>
 
 <p>This project contains embedded HSQL database, which destroys all
@@ -14,9 +16,24 @@
 	pom.xml and change META-INF/persistence.xml.</p>
 
 <p>
+	To send emails you must set SMTP server configuration (in
+	email.properties). At training we use <a
+		href="http://www.mandrillapp.com">http://www.mandrillapp.com</a>,
+	which offers free SMTP server, but you can provide your own. Also set
+	preview = false (also in email.properties).
+</p>
+
+<p>
 	How to run:
 	<code>mvn jetty:run</code>
 </p>
+
+<p>
+	How to build WAR file:
+	<code>mvn package</code>
+</p>
+
+<p>You can deploy this web application to <a href="http://www.heroku.com">Heroku</a>.</p>
 
 <h2>My other projects:</h2>
 

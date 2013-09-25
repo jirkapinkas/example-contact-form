@@ -30,22 +30,24 @@ public class SendEmailService {
 		String username = emailProperties.getProperty("mail.username");
 		String password = emailProperties.getProperty("mail.password");
 		String port = emailProperties.getProperty("mail.port");
+		boolean preview = Boolean.parseBoolean(emailProperties.getProperty("preview"));
 
-		props.setProperty("mail.transport.protocol", "smtp");
-		props.setProperty("mail.smtp.host", smtp);
-		props.setProperty("mail.smtp.port", port);
-		props.setProperty("mail.smtp.user", username);
+		if (!preview) {
+			props.setProperty("mail.transport.protocol", "smtp");
+			props.setProperty("mail.smtp.host", smtp);
+			props.setProperty("mail.smtp.port", port);
+			props.setProperty("mail.smtp.user", username);
 
-		final Session session = Session.getInstance(props, null);
-		session.setPasswordAuthentication(new URLName("smtp", smtp, -1, null, username, null), new PasswordAuthentication(username, password));
+			final Session session = Session.getInstance(props, null);
+			session.setPasswordAuthentication(new URLName("smtp", smtp, -1, null, username, null), new PasswordAuthentication(username, password));
 
-		Message message = new MimeMessage(session);
-		message.setFrom(new InternetAddress(from));
-		message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to));
-		message.setSubject(subject);
-		message.setText(body);
+			Message message = new MimeMessage(session);
+			message.setFrom(new InternetAddress(from));
+			message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to));
+			message.setSubject(subject);
+			message.setText(body);
 
-		Transport.send(message);
-
+			Transport.send(message);
+		}
 	}
 }
